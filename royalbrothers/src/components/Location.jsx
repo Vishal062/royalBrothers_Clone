@@ -12,7 +12,7 @@ return(
         <div className={styles.locaBar}>
         </div>
         <div>
-        <Text fontSize="22px" fontWeight="500">Bike Rentals</Text>
+        <Text fontSize="18px" fontWeight="500">Bike Rentals</Text>
         </div>
     </div>
     <div className={styles.search}>
@@ -23,7 +23,7 @@ return(
         <input placeholder="Search or type city to select"/>
         </div>
         <div className={styles.clear}>
-            <Text fontSize="22px" fontWeight="500">Clear</Text>
+            <Text fontSize="18px" fontWeight="500">Clear</Text>
         </div>
     </div>
     <div className={styles.tiles}>

@@ -4,7 +4,7 @@ import DrawerExample from './Drawer';
 export default function Nav(){
     return(
         <>
-        <div style={{display:"flex",flexDirection:"column"}}>
+        <div style={{display:"flex",flexDirection:"column",position:"fixed",width:"100%",backgroundColor:"white"}}>
         <div style={{textAlign:"right",width:"100%",marginTop:"5px",marginBottom:"5px",borderBottom:"0.1px solid lightgrey"}}>
         <div style={{display:"flex",flexDirection:"row",float:"right"}}>
         <img style={{height:"17px",marginTop:"4px",marginRight:"5px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector.png" alt="call"></img>
@@ -45,7 +45,7 @@ export default function Nav(){
                 <img style={{height:"8px",marginTop:"15px",marginLeft:"20px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
             </div>
         </div>
-        <div style={{marginLeft:"30px",width:"200px",display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+        <div style={{marginLeft:"30px", marginRight:"10px", width:"200px",display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
             <Button height="50px" width="90px" backgroundColor="transparent">Login</Button>
             <Button height="50px" width="90px" backgroundColor="#FDB605"> Sign up</Button>
         </div>
