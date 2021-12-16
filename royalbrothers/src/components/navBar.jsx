@@ -1,7 +1,10 @@
 import { Text,Button } from '@chakra-ui/react';
 import DrawerExample from './Drawer';
+import { useContext } from 'react';
+import { AppContext } from '../appContext/AppContextProvider';
 
 export default function Nav(){
+    const {location} = useContext(AppContext)
     return(
         <>
         <div style={{display:"flex",flexDirection:"column",position:"fixed",width:"100%",backgroundColor:"white"}}>
@@ -41,7 +44,7 @@ export default function Nav(){
         <div>
             <div style={{height:"40px",width:"200px",display:"flex",flexDirection:"row",marginLeft:"10px",border:"1px solid black",marginTop:"10px",borderRadius:"4px",borderColor:"#FDB605"}}>
             <img style={{height:"80%",marginLeft:"10px",marginTop:"4px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(2).png" alt="location"></img>
-                <Text  fontSize="18px" fontWeight="500" marginTop="4px" marginLeft="25px">Location</Text>
+                <Text  fontSize="13px" fontWeight="500" marginTop="10px" marginLeft="18px">{location}</Text>
                 <img style={{height:"8px",marginTop:"15px",marginLeft:"20px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
             </div>
         </div>

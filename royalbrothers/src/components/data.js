@@ -35,3 +35,159 @@ export let location =[
 {img:"https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Location/image%2079.png",name:"Otty"},
 {img:"https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Location/image%2080.png",name:"Pune"},
 {img:"https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Location/image%2081.png",name:"Kerala"}]
+
+
+
+export let bikess = [{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Apachi%20RTR%20180.png",
+    name:"Apache",
+    price:"324"
+},{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Bajaj%20pulsar.png",
+    name:"Pulsar",
+    price:"324"
+},{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Honda%20CBR.png",
+    name:"Honda Cbr",
+    price:"324"
+
+},{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Honda%20Dio.png",
+    name:"Honda Dio",
+    price:"324"
+
+},{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Honda%20activa%203G.png",
+    name:"Honda Activa 3g",
+    price:""
+},{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Honda%20activa%205G.png",
+    name:"Honda Activa 5g",
+    price:"324"
+},
+{ 
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Honda%20activa%206G.png",
+    name:"Honda Activa 6g",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/KTM%20duke%20250.png",
+    name:"Ktm Duke 250",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/RE%20continental%20GT%20650.png",
+    name:"Continental 650",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/RE%20himalayan.png",
+    name:"RE Himalayan",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/RE%20interceptor.png",
+    name:"RE Interceptor",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Royal%20enfield%20350-1.png",
+    name:"RE Classic 350",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Royal%20enfield%20350.png",
+    name:"RE Classic 350",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Royal%20enfield%20himalayan.png",
+    name:"Himalayan",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Tvs%20N%20torq.png",
+    name:"Tvs Ntorq",
+    price:"324"
+},
+{ 
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Tvs%20XL%20super.png",
+    name:"Tvs XL",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2012.png",
+    name:"Honda cb 250",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2013.png",
+    name:"RE Himalayan",
+    price:"324"
+},
+{
+    img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2014.png",
+    name:"Honda Hornet",
+    price:"324"
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2015.png",
+name:"Yahama Mt-15",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2017.png",
+name:"Honda X-blade",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2018.png",
+name:"Yamaha Fz",
+price:324
+},
+{
+img:"https://github.com/Vishal062/royalBrothers_Clone/blob/master/royalbrothers/bikeImages/Vehicle%2022.png",
+name:"Yamaha Fz-s",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2023.png",
+name:"Bajaj Avenger",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2024.png",
+name:"Classic 500",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2025.png",
+name:"RE Himalayan",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2026.png",
+name:"Classic 350",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2029.png",
+name:"RE Thunderbird",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2031.png",
+name:"Jawa",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2032.png",
+name:"RE Himalayan",
+price:324
+},
+{
+img:"https://raw.githubusercontent.com/Vishal062/royalBrothers_Clone/master/royalbrothers/bikeImages/Vehicle%2033.png",
+name:"Honda CB 350",
+price:32
+}
+]

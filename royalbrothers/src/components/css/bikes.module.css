@@ -1,0 +1,160 @@
+.sMain{
+    width: 100%;
+    height:1200px;
+    padding-top: 100px;
+}
+
+.sMain1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5px;
+}
+.sMain11{
+    width:25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+}
+.sMain11d{
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sMain11d>input{
+    width: 93%;
+    height: 35px;
+    padding-left: 10px;
+    border:none;
+    border-bottom: 2px solid grey;
+}
+.sMain11d>input:focus{
+    outline: none;
+}
+.sMain11d1{
+    display: flex;
+    width:95%;
+    flex-direction: row;
+    align-items: center;
+}
+.sMain11d1a{
+    display: flex;
+    width:50%;
+    flex-direction: column;
+}
+.sMain11d1b{
+    display: flex;
+    width:50%;
+    flex-direction: column;
+    margin-right: 1px;
+    text-align: right;
+}
+.sMain11d1c{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    margin-right: 1px;
+    text-align: left;
+}
+.sMain11d1d{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    margin-right: 1px;
+    text-align: left;
+}
+.sMain11d1c>p{
+padding-left: 10px;
+}
+.sMain11d1a>p{
+    padding-left: 10px;
+}
+.sMain11d1b>p{
+    padding-right: 10px;
+}
+.sMain11d1c>p{
+    padding-right: 10px;
+}
+.sMain11d1d>p{
+    padding-left: 10px;
+}
+.sMain11d1a>input{
+    border-bottom:2px solid grey;
+    margin-top:-2px;
+}
+.sMain11d1a>input:focus{
+    outline: none;
+}
+.sMain11d1b>input:focus{
+    outline: none;
+}
+.sMain11d1c>input:focus{
+    outline: none;
+}
+.sMain11d1d>input:focus{
+    outline: none;
+}
+.sMain11d1b>input{
+    border-bottom:2px solid grey;
+    margin-top:-2px;
+}
+.sMain11d1c>input{
+    border-bottom:2px solid grey;
+    margin-top:-2px;
+    padding-left:10px;
+}
+.sMain11d1d>input{
+    border-bottom:2px solid black;
+    margin-top:-2px;
+    padding-left:10px;
+    background-color: transparent;
+}
+
+.filter{
+    width:95%;
+    height:35px;
+    box-shadow: rgba(0.4, 0.3, 1, 0.2) 1px 3px 8px;
+    margin-bottom: 5px;
+}
+.filter>p{
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+.sLoc{
+    overflow: scroll;
+    width:95%;
+    overflow-x: hidden;
+    height:70px;
+    padding-left: 10px;
+}
+.button{
+    width:75%;
+    margin-top:15px;
+    background-color: #FDB605;
+    margin-left: -10PX;
+}
+
+.sMain12{
+    width:80%;
+    margin-left: 25%;
+    margin-right: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters{
+    width:70%;
+    height:35px;
+    box-shadow: rgba(0.4, 0.3, 1, 0.2) 1px 3px 8px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+}

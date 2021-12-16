@@ -1,7 +1,14 @@
-import styles from "./css/location.module.css"
+import styles from "./css/location.module.css";
+import { useContext } from "react";
+import { AppContext } from "../appContext/AppContextProvider";
 import { location } from "./data"
 import { Text } from "@chakra-ui/react"
 export default function Location({state}){
+    const {setLocation} = useContext(AppContext)
+    function setName(data){
+        localStorage.setItem("loc",JSON.stringify(data))
+        setLocation(data)
+    }
 return(
     <div className={styles.main} >
     <div className={styles.locations}>
@@ -28,7 +35,7 @@ return(
     </div>
     <div className={styles.tiles}>
         {location.map((e)=><div className={styles.tile}>
-            <img onClick={()=>{state(false)}} src={e.img} alt="locatios"></img>
+            <img onClick={()=>{state(false);setName(e.name)}} src={e.img} alt="locatios"></img>
             <Text className={styles.tilestext}>{e.name}</Text>
         </div>)}
     </div>

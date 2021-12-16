@@ -2,6 +2,7 @@ import Nav from "./components/navBar";
 import Home from "./components/Home";
 import Location from "./components/Location";
 import {useState} from "react"
+import Bikes from "./components/Bikes";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div style={{height:"100px",width:"100%"}}>
     </div>
     <Home />
+    {/* <Bikes /> */}
     </>
   )
 }

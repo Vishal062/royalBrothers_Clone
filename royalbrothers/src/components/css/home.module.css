@@ -68,6 +68,16 @@
     align-items: center;
 }
 
+.cra11{
+    width:100%;
+    height:500px;
+    position:absolute;
+    z-index:-90
+}
 .cra2{
     margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
+    position:absolute;
+    z-index:-90
 }

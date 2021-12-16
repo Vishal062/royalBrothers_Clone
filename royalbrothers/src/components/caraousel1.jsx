@@ -2,7 +2,7 @@ import {Carousel} from "react-bootstrap"
 import styles from "./css/craousel2.module.css"
 export default function Caraousel1(){
     return(
-    <Carousel className={styles.mainCra}>
+    <Carousel className={styles.mainCra} indicators={true} controls={true}>
     <Carousel.Item interval={1000}>
       <img
         className="d-block w-100 "
