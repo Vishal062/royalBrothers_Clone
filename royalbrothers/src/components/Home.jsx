@@ -1,5 +1,4 @@
 import styles from "./css/home.module.css"
-import {useEffect} from "react"
 import { Heading } from "@chakra-ui/react"
 import { Button } from '@chakra-ui/react'
 import Bar from "./bar"
@@ -46,7 +45,7 @@ export default function Home(){
                 <Caraousel1 />
                 </div>
                 <div className={styles.sep1}>
-                <Heading as='h3' size='lg' fontWeight="600" marginTop="730px">FEATURED IN</Heading>
+                <Heading as='h3' size='lg' fontWeight="600" marginTop="230px">FEATURED IN</Heading>
                 <Bar />
                 <div className={styles.cra2}>
                     <Caraousel2 />

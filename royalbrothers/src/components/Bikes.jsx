@@ -93,7 +93,7 @@ export default function Bikes(){
             <p>Tondiarpet </p>
             </div>
             </div>
-            <Button className={styles.button}>Apply Filters</Button>
+            <Button backgroundColor="#FDB605" className={styles.buttona}>Apply Filters</Button>
         </div>
         </div>
         <div className={styles.sMain12}>

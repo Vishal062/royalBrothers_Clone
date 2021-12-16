@@ -2,6 +2,7 @@ import { Text,Button } from '@chakra-ui/react';
 import DrawerExample from './Drawer';
 import { useContext } from 'react';
 import { AppContext } from '../appContext/AppContextProvider';
+import { Link } from 'react-router-dom';
 
 export default function Nav(){
     const {location} = useContext(AppContext)
@@ -24,7 +25,7 @@ export default function Nav(){
         </div>
         <div style={{display:"flex" ,flexDirection:"row",width:"55%",alignItems:"center",justifyContent:"space-evenly"}}>
         <div>
-            <Text fontSize="18px" fontWeight="500">Tariff</Text>
+            <Link to="/bikes"><Text fontSize="18px" fontWeight="500">Tariff</Text></Link>
             </div>
             <div>
             <Text fontSize="18px" fontWeight="500">Store</Text>
@@ -45,7 +46,7 @@ export default function Nav(){
             <div style={{height:"40px",width:"200px",display:"flex",flexDirection:"row",marginLeft:"10px",border:"1px solid black",marginTop:"10px",borderRadius:"4px",borderColor:"#FDB605"}}>
             <img style={{height:"80%",marginLeft:"10px",marginTop:"4px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(2).png" alt="location"></img>
                 <Text  fontSize="13px" fontWeight="500" marginTop="10px" marginLeft="18px">{location}</Text>
-                <img style={{height:"8px",marginTop:"15px",marginLeft:"20px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
+                <img style={{height:"8px",marginTop:"15px",position:"absolute",zIndex:"-100",marginLeft:"13%"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
             </div>
         </div>
         <div style={{marginLeft:"30px", marginRight:"10px", width:"200px",display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>

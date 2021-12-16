@@ -1,7 +1,6 @@
 .sMain{
     width: 100%;
     height:1200px;
-    padding-top: 100px;
 }
 
 .sMain1{
@@ -15,7 +14,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: fixed;
 }
 .sMain11d{
     width:95%;
@@ -130,7 +128,7 @@ padding-left: 10px;
     height:70px;
     padding-left: 10px;
 }
-.button{
+.buttona{
     width:75%;
     margin-top:15px;
     background-color: #FDB605;
@@ -139,7 +137,6 @@ padding-left: 10px;
 
 .sMain12{
     width:80%;
-    margin-left: 25%;
     margin-right: 5%;
     text-align: center;
     display: flex;
@@ -148,7 +145,7 @@ padding-left: 10px;
 }
 
 .filters{
-    width:70%;
+    width:100%;
     height:35px;
     box-shadow: rgba(0.4, 0.3, 1, 0.2) 1px 3px 8px;
     margin-bottom: 5px;
@@ -156,5 +153,4 @@ padding-left: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    position: fixed;
 }
