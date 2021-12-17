@@ -1,16 +1,39 @@
 import styles from "./css/login.module.css"
+import axios from "axios"
+import { useState } from "react"
 import { Button } from "@chakra-ui/react"
+import { useNavigate } from "react-router"
 export default function Login(){
+    const navigate = useNavigate();
+    const [user,setUser] = useState({
+        email:"",
+        password:""
+    })
+    function getData(){
+        try{
+            axios.post("http://localhost:3001/login",user)
+            .then((res)=>{
+                localStorage.setItem("token",JSON.stringify(res.data.token))
+                navigate("/")
+            })
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+
+    function handleChange(e){
+        const {name,value} = e.target;
+        setUser({...user,[name]:value})
+    }
     return(
         <div className={styles.mainLog}>
         <div className={styles.mobil}>
-        <p>Mobile</p>
         <div className={styles.mobil1}>
-        <input className={styles.inp1} placeholder="+91"></input>
-        <input className={styles.inp2} placeholder="As Per Aadhar"></input>
+        <input className={styles.inp2} type="text" name="email" value={user.email} placeholder="Email" onChange={handleChange}></input>
         </div>
         </div>
-        <input type="password" placeholder="Password"></input>
+        <input  name="password" value={user.password} placeholder="Password" onChange={handleChange} type="password"></input>
         <div className={styles.capt}>
             <input type="checkbox"></input>
             <p className={styles.itr} >Remember Password?</p>
@@ -21,7 +44,7 @@ export default function Login(){
             <p>I am not a robot.</p>
             <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2083.png" alt="cap"></img>
         </div>
-        <Button className={styles.spBt} backgroundColor="#FDB605">Login With Password</Button>
+        <Button className={styles.spBt} backgroundColor="#FDB605" onClick={getData}>Login With Password</Button>
         <p className={styles.Ors}>OR</p>
         <Button width="190px" marginLeft="100px" marginTop="30px" >Login With OTP</Button>
         </div>
