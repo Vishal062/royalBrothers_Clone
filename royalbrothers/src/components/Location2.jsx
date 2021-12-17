@@ -1,6 +1,9 @@
 import styles from "./css/location2.module.css";
 import {Button} from "@chakra-ui/react"
+import { useContext } from "react";
+import {AppContext} from "../appContext/AppContextProvider"
 export default function Location2(){
+    const {setTerms} = useContext(AppContext)
 return(
     <div className={styles.main} >
     <div className={styles.Terms}>
@@ -40,7 +43,7 @@ return(
     <input type="checkbox"></input>
     <p>I agree to upload valid driving license and ID proof before the ride starts</p>
     </div>
-    <Button marginLeft="35px" width="170px" backgroundColor="#FDB605">PROCEED</Button>
+    <Button marginLeft="35px" width="170px" backgroundColor="#FDB605" onClick={()=>setTerms(false)}>PROCEED</Button>
     </div>
     </div>
 )

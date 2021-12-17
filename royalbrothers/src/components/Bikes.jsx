@@ -1,6 +1,7 @@
 import styles from "./css/bikes.module.css"
 import { Button } from "@chakra-ui/react"
 import { bikess } from "./data"
+import { Link } from "react-router-dom"
 export default function Bikes(){
     return(
         <div className={styles.sMain}>
@@ -138,7 +139,7 @@ export default function Bikes(){
                 <p>85 km included</p>
                 </div>
                 <div className={styles.lastB2}>
-                <Button>BOOK</Button>
+                <Link to="/checkout"><Button marginLeft="30px" width="130px" backgroundColor="#FDB605">BOOK</Button></Link>
                 </div>
                 </div>
                 </div>
