@@ -1,7 +1,10 @@
 import styles from "./css/checkout.module.css"
 import { bikess } from "./data"
 import { Button } from '@chakra-ui/react'
+import { useContext } from "react"
+import { AppContext } from "../appContext/AppContextProvider"
 export default function PaymentDetails(){
+    const {setTerms} = useContext(AppContext)
     return(
         <div className={styles.checMain}>
         <div className={styles.checMain1}>
@@ -89,7 +92,7 @@ export default function PaymentDetails(){
         <p>Total Payable Amount</p>
         <p>₹416</p>
         </div>
-        <Button marginLeft="40px" width="350px" marginTop="40px" backgroundColor="#FDB605">Make Payment</Button>
+        <Button marginLeft="40px" width="350px" marginTop="40px" backgroundColor="#FDB605" onClick={()=>{setTerms(true)}}>Make Payment</Button>
         </div>    
         </div>
     )
