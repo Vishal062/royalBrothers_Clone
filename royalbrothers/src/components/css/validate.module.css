@@ -1,0 +1,52 @@
+.mainV{
+    width:30%;
+    height:550px;
+    border:2px solid lightgrey;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 40px;
+}
+
+.mainLa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width:40%;
+    margin: auto;
+}
+
+.mainLa>p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.mainSilo{
+    width:50%;
+    height:70px;
+    margin: auto;
+}
+.swapLosi{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.swapLosi>button{
+    font-size: 18px;
+    height:30px;
+    width:100%;
+    margin-top: 30px;
+    margin-right: 10px;
+    border-bottom:2px solid lightgray
+}
+.swapLosi>button:hover{
+    border-bottom: 2px solid #FDB605;
+}
+
+.comp{
+    margin-left: 16%;
+}

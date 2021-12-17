@@ -1,5 +1,6 @@
 import styles from "./css/bikes.module.css"
 import { Button } from "@chakra-ui/react"
+import { bikess } from "./data"
 export default function Bikes(){
     return(
         <div className={styles.sMain}>
@@ -102,6 +103,46 @@ export default function Bikes(){
             <button>Relevance</button>
             <button>Price Low To High</button>
             <button>Price Hight To Low</button>
+            </div>
+            <div className={styles.bikesB}>
+            {bikess.map((e)=>
+                <div key={e.name} className={styles.biTile}>
+                <div className={styles.biHed}>
+                    <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2082.png" alt="best"></img>
+                    <p>zero deposit</p>
+                </div>
+                <div className={styles.bikeInfo}>
+                <p>{e.name}</p>
+                <img src={e.img} alt={e.name}></img>
+                </div>
+                <div className={styles.bikeLoct}>
+                <p>Available at</p>
+                    <input type="text" placeholder="Location"></input>
+                </div>
+                <div className={styles.bikeDa}>
+                    <div className={styles.bikeDa1}>
+                    <p>10:30 AM</p>
+                    <p>08 DEC 2021</p>
+                    </div>
+                    <div className={styles.bikeDa2}>
+                    <p>TO</p>
+                    </div>
+                    <div className={styles.bikeDa3}>
+                    <p>11:30 AM</p>
+                    <p>09 DEC 2021</p>
+                    </div>
+                </div>
+                <div className={styles.lastB}>
+                <div className={styles.lastB1}>
+                <p>₹{e.price}</p>
+                <p>85 km included</p>
+                </div>
+                <div className={styles.lastB2}>
+                <Button>BOOK</Button>
+                </div>
+                </div>
+                </div>
+            )}
             </div>
         </div>
         </div>

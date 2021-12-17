@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: -640px;
 }
 .sMain11d{
     width:95%;
@@ -138,10 +139,12 @@ padding-left: 10px;
 .sMain12{
     width:80%;
     margin-right: 5%;
+    height:1150px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: grid;
 }
 
 .filters{
@@ -153,4 +156,141 @@ padding-left: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+.filters>button:hover{
+    border-bottom:2px solid #FDB605;
+}
+.bikesB{
+    width:100%;
+    height:1100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap:2%;
+    overflow: scroll;
+    overflow-x:hidden ;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.biTile{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.biHed{
+    display: flex;
+    flex-direction: row;
+}
+.biHed>p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.bikeInfo{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid lightgrey;
+}
+.bikeInfo>p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bikeLoct{
+    width:100%;
+}
+.bikeLoct>p{
+    font-size: 15px;
+    color:lightgray
+}
+.bikeLoct>input{
+    width:90%;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color:black
+}
+.bikeLoct>input:focus{
+    outline: none;
+}
+
+.bikeDa{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    border: 2px solid lightgrey;
+    border-right: none;
+    border-left: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 5px;
+}
+.bikeDa1{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    text-align: left;
+}
+.bikeDa1>p:nth-child(1){
+    font-weight: 600;
+}
+.bikeDa2{
+    display: flex;
+    flex-direction: row;
+    width:10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    text-align: center;
+    color:white;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+.bikeDa2>p:nth-child(1){
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+.bikeDa3{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    text-align: left;
+}
+.bikeDa3>p:nth-child(1){
+    font-weight: 600;
+}
+.lastB{
+    display: flex;
+    flex-direction: row;
+}
+
+.lastB1{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.lastB2{
+    display: flex;
+    flex-direction: row;
+  align-items: center;
+}
+.lastB2>button{
+    width:130px;
+    margin-left: 35px;
+    background-color: #FDB605;
+}
+.lastB1>p:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 12px;
+}
+.lastB1>p:nth-child(2){
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 12px;
 }
