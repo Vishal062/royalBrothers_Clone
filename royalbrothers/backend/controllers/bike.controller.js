@@ -19,6 +19,10 @@ router.get("/:id",async(req,res)=>{
     res.send(data)
 })
 
+router.get("/:location/:time",async(req,res)=>{
+    const data = await Bike.find({$and: [ { location: { $eq: req.params.location } }, { availableTime: { $gte: req.params.time } } ]});
+    res.send(data)
+})
 router.patch("/:id",async(req,res)=>{
     const data = await Bike.findByIdAndUpdate(req.params.id,req.body);
     res.send(data)

@@ -1,14 +1,31 @@
 import styles from "./css/bikes.module.css"
 import { Button } from "@chakra-ui/react"
 // import { bikess } from "./data"
-import { useContext } from "react"
+import { useContext,useEffect,useState } from "react"
 import { AppContext } from "../appContext/AppContextProvider"
 import { useNavigate } from "react-router"
-import {useSelector} from "react-redux"
+import {useSelector,useDispatch} from "react-redux"
+import {getData} from "../redux/action"
+import axios from "axios"
 export default function Bikes(){
-    const {pick,drop,location} = useContext(AppContext)
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        const pickUp = JSON.parse(localStorage.getItem("pick"));
+        const dropl = JSON.parse(localStorage.getItem("drop"));
+        const location = JSON.parse(localStorage.getItem("loc"))
+        const pic = Number(pickUp.end.split(":")[0]);
+        setdTime(pic)
+        setPick(pickUp);
+        setDrop(dropl)
+        setLocation(location)
+        axios.get(`http://localhost:3001/bike/${location}/${pic}`)
+        .then((res)=>{
+            dispatch(getData(res.data))
+        })
+    },[])
+    const {pick,drop,location,setDrop,setPick,setLocation} = useContext(AppContext)
+    const [dtime,setdTime] = useState(0)
     const navigate = useNavigate();
-    let time = Number(drop.end.split(":")[0])-12
     function handleNavigate(data){
         const token = JSON.parse(localStorage.getItem("token"))
         localStorage.setItem("id",JSON.stringify(data))
@@ -138,14 +155,14 @@ export default function Bikes(){
                 </div>
                 <div className={styles.bikeDa}>
                     <div className={styles.bikeDa1}>
-                    <p>{} AM</p>
+                    <p>{e.availableTime} AM</p>
                     <p>08 DEC 2021</p>
                     </div>
                     <div className={styles.bikeDa2}>
                     <p>TO</p>
                     </div>
                     <div className={styles.bikeDa3}>
-                    <p>{time} PM</p>
+                    <p>{dtime} PM</p>
                     <p>09 DEC 2021</p>
                     </div>
                 </div>

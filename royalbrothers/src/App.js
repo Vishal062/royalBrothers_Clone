@@ -2,6 +2,8 @@ import Nav from "./components/navBar";
 import Home from "./components/Home";
 import Location from "./components/Location";
 import Location2 from "./components/Location2";
+import Payment  from "./components/Payment";
+import PaymentConfirm from "./components/PaymentConfirm";
 import {useState} from "react"
 import Bikes from "./components/Bikes";
 import Footer from "./components/Footer";
@@ -29,6 +31,8 @@ function App() {
       <Route path="/bikes" element={<Bikes/>}></Route>
       <Route path="/validate" element={<Validations/>}></Route>
       <Route path="/checkout" element={<PaymentDetails />}></Route>
+      <Route path="/payment" element={<Payment />}></Route>
+      <Route path="/paymentconfirm" element={<PaymentConfirm />}></Route>
     </Routes>
     <Footer />
     </>

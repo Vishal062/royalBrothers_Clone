@@ -39,7 +39,6 @@ const register = async(req,res) =>{
 const login = async(req,res)=>{
     try{
     user = await User.findOne({email:req.body.email});
-    console.log(user)
     if(!user) return res.send({status:400,message:"Please check your email or passsword.",headers:"none"})
 
     let match = user.checkPassword(req.body.password);
