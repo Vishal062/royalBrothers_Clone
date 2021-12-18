@@ -1,5 +1,4 @@
-import { react } from "react";
-import "./css/PaymentConfirm.css";
+
 export default function PaymentConfirm (){
   return (
     <>

@@ -2,23 +2,22 @@ import styles from "./css/checkout.module.css"
 // import { bikess } from "./data"
 import { Button } from '@chakra-ui/react'
 import { useContext,useEffect,useState } from "react"
-import {useSelector} from "react-redux"
 import { AppContext } from "../appContext/AppContextProvider"
+import axios from "axios"
 export default function PaymentDetails(){
     const {setTerms} = useContext(AppContext);
-    const {bikes} = useSelector(state=>state)
     useEffect(()=>{
         const id = JSON.parse(localStorage.getItem("id"))
         const pick = JSON.parse(localStorage.getItem("pick"))
         const drop = JSON.parse(localStorage.getItem("drop"));
+        const ids = JSON.parse(localStorage.getItem("id"));
         setPick(pick);
         setDrop(drop)
-        for(var i=0;i<bikes.length;i++){
-            if(bikes[i]._id===id){
-                setBike(bikes[i])
-            }
-        }
-        console.log(bike)
+        axios.get(`http://localhost:3001/bike/${ids}`)
+        .then((res)=>{
+            setBike(res.data)
+        })
+
     },[])
     const [bike,setBike] = useState({})
     const [pick,setPick] = useState({})

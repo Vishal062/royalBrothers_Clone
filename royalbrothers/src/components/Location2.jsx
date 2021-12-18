@@ -2,6 +2,7 @@ import styles from "./css/location2.module.css";
 import {Button} from "@chakra-ui/react"
 import { useContext } from "react";
 import {AppContext} from "../appContext/AppContextProvider"
+import { Link } from "react-router-dom"
 export default function Location2(){
     const {setTerms} = useContext(AppContext)
 return(
@@ -43,7 +44,7 @@ return(
     <input type="checkbox"></input>
     <p>I agree to upload valid driving license and ID proof before the ride starts</p>
     </div>
-    <Button marginLeft="35px" width="170px" backgroundColor="#FDB605" onClick={()=>setTerms(false)}>PROCEED</Button>
+    <Link to="/payment"><Button marginLeft="35px" width="170px" backgroundColor="#FDB605" onClick={()=>setTerms(false)}>PROCEED</Button></Link>
     </div>
     </div>
 )

@@ -1,137 +1,93 @@
-import { react } from "react";
-import "./css/Payment.css";
-export default function Payment(){
+import styles from "./css/payment.module.css"
+import { Button } from "@chakra-ui/react";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
+
+
+export default function Payment(){  
+
+
   return (
     <>
-      <div className="MainBody">
-        <div className="Payment">
-          <div className="CPM">
-            <p className="t1">Choose Payment Method</p>
-          </div>
-          <div className="box1">
-            <div className="P11">
-              <p className="t2">Credit card</p>
-            </div>
-            <div className="P1">
-              <p className="t2">Debit Card</p>
-            </div>
-            <div className="P1">
-              <p className="t2">Net Banking</p>
-            </div>
-            <div className="P1">
-              <p className="t2">UPI Payment</p>
-            </div>
-            <div className="P1">
-              <img
-                className="img1"
-                src={require("./Images/Paytm.png")}
-                alt="paytm"
-              />
-            </div>
-          </div>
-
-          <div className="box2">
-            <p className="t3">Enter Your Card Details</p>
-            <input
-              className="t3"
-              type="radio"
-              value="MALE"
-              name="Payment"
-            />{" "}
-            <img
-              className="img2"
-              src={require("./Images/Visa.png")}
-              alt="paytm"
-            />
-            <input className="t3" type="radio" value="MALE" name="Payment" />{" "}
-            <img
-              className="img2"
-              src={require("./Images/dinnersClub.png")}
-              alt="paytm"
-            />
-            <input className="t3" type="radio" value="MALE" name="Payment" />{" "}
-            <img
-              className="img2"
-              src={require("./Images/Aexpress.png")}
-              alt="paytm"
-            />
-            <input className="t3" type="radio" value="MALE" name="Payment" />{" "}
-            <img
-              className="img2"
-              src={require("./Images/rupay.png")}
-              alt="paytm"
-            />
-            <div className="paymentDetails">
-              <p className="t4">Card Number</p>
-              <input className="inp2" placeholder="Enter Your Card Number" />
-              <p className="t4">Name on the Card</p>
-              <input className="inp2" placeholder="Enter Your Name" />
-
-              <p className="t4">Expiry</p>
-              <select className="inp3" name="expireMM" id="expireMM">
-                <option value="">Month</option>
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-              <select className="inp3" name="expireYY" id="expireYY">
-                <option value="">Year</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-                <option value="24">2024</option>
-              </select>
-              <select className="inp3" name="expireYY" id="expireYY">
-                <option value="">CVV</option>
-                <option value="20">947</option>
-                <option value="21">578</option>
-                <option value="22">341</option>
-                <option value="23">564</option>
-              </select>
-              <input
-                class="inputCard"
-                type="hidden"
-                name="expiry"
-                id="expiry"
-                maxlength="4"
-              />
-            </div>
-            <button className="btn11">MAKE PAYMENT</button>
-          </div>
+      <div className={styles.mainBod}>
+      <div className={styles.mainBod1}>
+      <div className={styles.mainBod1H}>
+      <p>CHOOSE PAYMENT METHOD</p>
+      </div>
+      <div className={styles.mainBod1m}>
+        <div className={styles.mainBod1m1}>
+        <Button width="250px" height="40px" borderRadius="0px" borderBottom="2px solid lightgrey">Credit card</Button>
+        <Button width="250px" height="40px" borderRadius="0px" borderBottom="2px solid lightgrey">Debit card</Button>
+        <Button width="250px" height="40px" borderRadius="0px" borderBottom="2px solid lightgrey">Net Banking</Button>
+        <Button width="250px" height="40px" borderRadius="0px" borderBottom="2px solid lightgrey">Upi Banking</Button>
+        <Button width="250px" height="40px" borderRadius="0px" borderBottom="2px solid lightgrey"></Button>
         </div>
-
-        <div className="Summary">
-          <div className="CPM1">
-            <p className="t1">Summary</p>
-            <p className="s1">Total payable amount</p>
-            <p className="s1">&#8377; 416</p>
-            <img
-              className="loading"
-              src={require("./Images/loading.png")}
-              alt="Time Loading"
-            />
-          </div>
+        <div className={styles.mainBod1m2}>
+        <div className={styles.mainBod1m2a}>
+          <p>Enter Card Details</p>
+        </div>
+        <div className={styles.mainBod1m2a1}> 
+        <div className={styles.mainBod1m2a1a}>
+        <input type="radio"></input>
+          <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2022.png" alt="card"></img>
+        </div>
+        <div className={styles.mainBod1m2a1a}>
+        <input type="radio"></input>
+          <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2021%20(1).png" alt="card"></img>
+        </div>
+        <div className={styles.mainBod1m2a1a}>
+        <input type="radio"></input>
+          <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2020%402x.png" alt="card"></img>
+        </div>
+        <div className={styles.mainBod1m2a1b}>
+        <input type="radio"></input>
+          <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2023%20(1).png" alt="card"></img>
+        </div>
+        </div>
+        <div className={styles.mainInp}>
+        <p className={styles.cardst}>Card Number</p>
+        <input  className={styles.cardsi}></input>
+        <p className={styles.cardst}>Name on Card</p>
+        <input  className={styles.cardsi}></input>
+        <div className={styles.expi}>
+          <p>Expiry</p>
+          <p>Cvv</p>
+        </div>
+        <div className={styles.expii}>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+        <Button marginTop="10px" marginLeft="19px" width="250px" backgroundColor="#FDB605">Make Payment</Button>
+        </div>
         </div>
       </div>
-
-      <div className="note">
-        <p className="noteTxt">
-          <b>Note:</b> Making Payments on RoyalBrothers.com is 100% safe. Your
-          transaction is processed through a secure https internet connection
-          based on secure socket layer technology. Your payment details are only
-          used for processing the transaction and never stored.
-        </p>
       </div>
+      <div className={styles.mainBod2}>
+      <div className={styles.mainBod2H}>
+      <p>SUMMARY</p>
+      </div>
+      <div className={styles.paym}>
+        <p>Total Payable Amount</p>
+        <p>₹416</p>
+      </div>
+      <div className={styles.timer}>
+      <CountdownCircleTimer
+    isPlaying
+    duration={180}
+    colors={[
+      ['#000000', 0.33],
+      ['#000000', 0.33],
+      ['#000000', 0.33],
+    ]}
+  >
+    {({ remainingTime }) => remainingTime}
+  </CountdownCircleTimer>
+  </div>
+      </div>
+      </div>
+      <div className={styles.note}>
+    <p><strong>Note:</strong> Making Payments on RoyalBrothers.com is 100% safe. Your transaction is processed through a secure https internet connection based on secure socket layer technology. Your payment details are only used for processing the transaction and never stored.</p>
+  </div>
     </>
   );
 };

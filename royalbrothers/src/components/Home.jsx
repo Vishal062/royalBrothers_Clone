@@ -15,7 +15,7 @@ import axios from "axios"
 
 
 export default function Home(){
-    const {setPick,setDrop,location} = useContext(AppContext)
+    const {setPick,setDrop} = useContext(AppContext)
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [pickup,setPickup] = useState({
