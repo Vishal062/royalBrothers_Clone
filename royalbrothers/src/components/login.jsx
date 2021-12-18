@@ -13,8 +13,17 @@ export default function Login(){
         try{
             axios.post("http://localhost:3001/login",user)
             .then((res)=>{
-                localStorage.setItem("token",JSON.stringify(res.data.token))
-                navigate("/")
+                if(res.data.status===400){
+                    alert(res.data.message);
+                    return;
+                }
+                localStorage.setItem("token",JSON.stringify(res.data.token));
+                const token = JSON.parse(localStorage.getItem("token"));
+                if(token!==""){
+                    navigate("/checkout")
+                }else{
+                    navigate("/validate")
+                }
             })
         }catch(err){
             console.log(err)

@@ -1,8 +1,21 @@
 import styles from "./css/bikes.module.css"
 import { Button } from "@chakra-ui/react"
 import { bikess } from "./data"
-import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { AppContext } from "../appContext/AppContextProvider"
+import { useNavigate } from "react-router"
 export default function Bikes(){
+    const {pick,drop,location} = useContext(AppContext)
+    const navigate = useNavigate()
+    function handleNavigate(){
+        const token = JSON.parse(localStorage.getItem("token"))
+        if(token!==""){
+            navigate("/checkout")
+        }else{
+            navigate("/validate")
+        }
+    }
+
     return(
         <div className={styles.sMain}>
         <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Header%20of%204%20or%207%20days.png" alt="header"></img>
@@ -16,21 +29,21 @@ export default function Bikes(){
             <div className={styles.sMain11d1}>
                 <div className={styles.sMain11d1a}>
                     <p>Pickup Date</p>
-                    <input type="text"></input>
+                    <input type="text" value={pick.start}></input>
                 </div>
                 <div className={styles.sMain11d1b}>
                     <p>Time</p>
-                    <input type="text"></input>
+                    <input type="text" value={pick.end}></input>
                 </div>
             </div>
             <div className={styles.sMain11d1}>
                 <div className={styles.sMain11d1a}>
                     <p>Dropoff Date</p>
-                    <input type="text"></input>
+                    <input type="text" value={drop.start}></input>
                 </div>
                 <div className={styles.sMain11d1b}>
                     <p>Time</p>
-                    <input type="text"></input>
+                    <input type="text" value={drop.end}></input>
                 </div>
             </div>
             <div className={styles.sMain11d1}>
@@ -42,7 +55,7 @@ export default function Bikes(){
             <div className={styles.sMain11d1}>
                 <div className={styles.sMain11d1d}>
                     <p>Search by location</p>
-                    <input type="text" placeholder="Search Location"></input>
+                    <input type="text" value={location} placeholder="Search Location"></input>
                 </div>
             </div>
             <div className={styles.sMain11d1}>
@@ -139,7 +152,7 @@ export default function Bikes(){
                 <p>85 km included</p>
                 </div>
                 <div className={styles.lastB2}>
-                <Link to="/checkout"><Button marginLeft="30px" width="130px" backgroundColor="#FDB605">BOOK</Button></Link>
+                <Button marginLeft="30px" width="130px" backgroundColor="#FDB605" onClick={handleNavigate}>BOOK</Button>
                 </div>
                 </div>
                 </div>

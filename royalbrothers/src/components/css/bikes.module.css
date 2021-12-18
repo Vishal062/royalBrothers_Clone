@@ -82,6 +82,7 @@ padding-left: 10px;
 .sMain11d1a>input{
     border-bottom:2px solid grey;
     margin-top:-2px;
+    padding-left: 10px;
 }
 .sMain11d1a>input:focus{
     outline: none;
@@ -98,6 +99,8 @@ padding-left: 10px;
 .sMain11d1b>input{
     border-bottom:2px solid grey;
     margin-top:-2px;
+    text-align: right;
+    padding-right: 10px;
 }
 .sMain11d1c>input{
     border-bottom:2px solid grey;
