@@ -1,10 +1,29 @@
 import styles from "./css/checkout.module.css"
-import { bikess } from "./data"
+// import { bikess } from "./data"
 import { Button } from '@chakra-ui/react'
-import { useContext } from "react"
+import { useContext,useEffect,useState } from "react"
+import {useSelector} from "react-redux"
 import { AppContext } from "../appContext/AppContextProvider"
 export default function PaymentDetails(){
-    const {setTerms} = useContext(AppContext)
+    const {setTerms} = useContext(AppContext);
+    const {bikes} = useSelector(state=>state)
+    useEffect(()=>{
+        const id = JSON.parse(localStorage.getItem("id"))
+        const pick = JSON.parse(localStorage.getItem("pick"))
+        const drop = JSON.parse(localStorage.getItem("drop"));
+        setPick(pick);
+        setDrop(drop)
+        for(var i=0;i<bikes.length;i++){
+            if(bikes[i]._id===id){
+                setBike(bikes[i])
+            }
+        }
+        console.log(bike)
+    },[])
+    const [bike,setBike] = useState({})
+    const [pick,setPick] = useState({})
+    const [drop,setDrop] = useState({})
+    console.log(bike)
     return(
         <div className={styles.checMain}>
         <div className={styles.checMain1}>
@@ -13,22 +32,22 @@ export default function PaymentDetails(){
             <p>SUMMARY</p>
         </div>
             <div className={styles.bikeIm}>
-            <img src={bikess[0].img} alt=" "></img>
-            <p>{bikess[0].name}</p>
+            <img src={bike.image} alt=" "></img>
+            <p>{bike.name}</p>
             </div>
             </div>
             <div className={styles.checMain12}>
             <div className={styles.slotTi}>
                 <div className={styles.slotTi1}>
-                    <p>09:00 am</p>
-                    <p>01 Dec 2011</p>
+                    <p>{bike.availableTime}:00 am</p>
+                    <p>{pick.start}</p>
                 </div>
                 <div className={styles.slotTi2}>
                     <p>to</p>
                 </div>
                 <div className={styles.slotTi3}>
-                    <p>08:00 pm</p>
-                    <p>02 Dec 2011</p>
+                    <p>8:00 pm</p>
+                    <p>{drop.start}</p>
                 </div>
             </div>
             <div className={styles.checLocat}>
@@ -39,11 +58,11 @@ export default function PaymentDetails(){
             <div className={styles.checPri}>
             <div className={styles.checPri1}>
             <p>weekday - 35.0 hrs * ₹55.0/hr</p>
-            <p>₹1925.0</p>
+            <p>₹{bike.price*4}</p>
             </div>
             <div className={styles.checPri2}>
             <p>Total</p>
-            <p>₹1925</p>
+            <p>₹{bike.price*4}</p>
             </div>
             <div  className={styles.checPri3}>
             <p>Number of Helmet. (?) </p>
@@ -82,7 +101,7 @@ export default function PaymentDetails(){
         </div>
         <div className={styles.checMain24}>
         <p>SGST (14%)</p>
-        <p>45.5</p>
+        <p>₹45.5</p>
         </div>
         <div className={styles.checMain25}>
         <p>Refundeable deposit Fee</p>

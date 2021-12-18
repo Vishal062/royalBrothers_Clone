@@ -7,12 +7,16 @@ import Caraousel1 from "./caraousel1"
 import Caraousel2 from "./caraousel2"
 import {useState} from "react"
 import { useNavigate } from "react-router"
-import { useContext } from "react"
+import { useContext} from "react"
+import {useDispatch} from "react-redux"
+import { getData } from "../redux/action"
 import { AppContext } from "../appContext/AppContextProvider"
+import axios from "axios"
 
 
 export default function Home(){
-    const {setPick,setDrop} = useContext(AppContext)
+    const {setPick,setDrop,location} = useContext(AppContext)
+    const dispatch = useDispatch()
     const navigate = useNavigate();
     const [pickup,setPickup] = useState({
         start:"",
@@ -34,11 +38,28 @@ export default function Home(){
 
     function handleData(){
         if(pickup.start&&pickup.end&&dropOff.start&&dropOff.end){
-        localStorage.setItem("pick",JSON.stringify(pickup))
-        localStorage.setItem("drop",JSON.stringify(dropOff))
-        setPick(pickup)
-        setDrop(dropOff)
-        navigate("/bikes")
+            let time = Number(+pickup.end.split(":")[0])
+            try{
+                axios.get("http://localhost:3001/bike")
+                .then((res)=>{
+                    let data = [];
+                    for(var i=0;i<res.data.length;i++){
+                        if(res.data[i].availableTime>=time&&res.data[i].available===true){
+                            data.push(res.data[i])
+                        }
+                    }
+                    dispatch(getData(data));
+                    localStorage.setItem("pick",JSON.stringify(pickup))
+                    localStorage.setItem("drop",JSON.stringify(dropOff))
+                    setPick(pickup)
+                    setDrop(dropOff)
+                    navigate("/bikes")
+                })
+
+            }catch(err){
+                console.log(err)
+            }
+     
         }else{
             alert("Select All the fields")
         }

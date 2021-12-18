@@ -1,21 +1,24 @@
 import styles from "./css/bikes.module.css"
 import { Button } from "@chakra-ui/react"
-import { bikess } from "./data"
+// import { bikess } from "./data"
 import { useContext } from "react"
 import { AppContext } from "../appContext/AppContextProvider"
 import { useNavigate } from "react-router"
+import {useSelector} from "react-redux"
 export default function Bikes(){
     const {pick,drop,location} = useContext(AppContext)
-    const navigate = useNavigate()
-    function handleNavigate(){
+    const navigate = useNavigate();
+    let time = Number(drop.end.split(":")[0])-12
+    function handleNavigate(data){
         const token = JSON.parse(localStorage.getItem("token"))
+        localStorage.setItem("id",JSON.stringify(data))
         if(token!==""){
             navigate("/checkout")
         }else{
             navigate("/validate")
         }
     }
-
+    const {bikes} = useSelector(state=>state)
     return(
         <div className={styles.sMain}>
         <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Header%20of%204%20or%207%20days.png" alt="header"></img>
@@ -119,30 +122,30 @@ export default function Bikes(){
             <button>Price Hight To Low</button>
             </div>
             <div className={styles.bikesB}>
-            {bikess.map((e)=>
-                <div key={e.name} className={styles.biTile}>
+            {bikes.map((e)=>
+                <div key={e._id} className={styles.biTile}>
                 <div className={styles.biHed}>
                     <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2082.png" alt="best"></img>
                     <p>zero deposit</p>
                 </div>
                 <div className={styles.bikeInfo}>
                 <p>{e.name}</p>
-                <img src={e.img} alt={e.name}></img>
+                <img src={e.image} alt={e.name}></img>
                 </div>
                 <div className={styles.bikeLoct}>
                 <p>Available at</p>
-                    <input type="text" placeholder="Location"></input>
+                    <input type="text" placeholder="Location" value={e.location}></input>
                 </div>
                 <div className={styles.bikeDa}>
                     <div className={styles.bikeDa1}>
-                    <p>10:30 AM</p>
+                    <p>{} AM</p>
                     <p>08 DEC 2021</p>
                     </div>
                     <div className={styles.bikeDa2}>
                     <p>TO</p>
                     </div>
                     <div className={styles.bikeDa3}>
-                    <p>11:30 AM</p>
+                    <p>{time} PM</p>
                     <p>09 DEC 2021</p>
                     </div>
                 </div>
@@ -152,7 +155,7 @@ export default function Bikes(){
                 <p>85 km included</p>
                 </div>
                 <div className={styles.lastB2}>
-                <Button marginLeft="30px" width="130px" backgroundColor="#FDB605" onClick={handleNavigate}>BOOK</Button>
+                <Button marginLeft="30px" width="130px" backgroundColor="#FDB605" onClick={()=>{handleNavigate(e._id)}}>BOOK</Button>
                 </div>
                 </div>
                 </div>
