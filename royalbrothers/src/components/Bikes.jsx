@@ -24,12 +24,13 @@ export default function Bikes(){
             dispatch(getData(res.data))
         })
     },[])
-    const {pick,drop,location,setDrop,setPick,setLocation} = useContext(AppContext)
+    const {pick,drop,location,setDrop,setPick,setLocation,setS} = useContext(AppContext)
     const [dtime,setdTime] = useState(0)
     const navigate = useNavigate();
     function handleNavigate(data){
         const token = JSON.parse(localStorage.getItem("token"))
         localStorage.setItem("id",JSON.stringify(data))
+        setS((prev)=>prev-1)
         if(token!==""){
             navigate("/checkout")
         }else{

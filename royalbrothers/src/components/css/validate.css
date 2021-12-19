@@ -1,3 +1,6 @@
+*{
+    font-family: 'Mulish', sans-serif;;
+  }
 .validate {
     display: flex;
     flex-direction: column;

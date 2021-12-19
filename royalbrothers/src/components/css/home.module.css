@@ -1,4 +1,7 @@
-.info{
+*{
+    font-family: 'Mulish', sans-serif;;
+  }
+  .info{
     width:65%;
     display: flex;
     margin: auto;
@@ -90,7 +93,7 @@
 }
 .dataH1{
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -99,13 +102,13 @@
     margin-top: 20px;
     margin-left: 15px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
 }
 .dropOff{
     margin-top: 20px;
     margin-left: 15px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .datTi{

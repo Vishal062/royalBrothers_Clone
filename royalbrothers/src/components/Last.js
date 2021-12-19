@@ -58,7 +58,7 @@ const Last = () => {
                         </div>
                         <div className="third_container">
                             <p className="p1">Total Amount Paid</p>
-                            <p className="p2">₹{(bike.price*4)+Math.floor(bike.price*0.28)}</p>
+                            <p className="p2">₹{(bike.price*4)+Math.floor(bike.price*4*0.28)}</p>
                         </div>
                     </div>
                     <div className="child2">

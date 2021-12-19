@@ -97,11 +97,11 @@ export default function PaymentDetails(){
         </div>
         <div className={styles.checMain23}>
         <p>CGST (14%)</p>
-        <p>₹{Math.floor(bike.price*0.14)}</p>
+        <p>₹{Math.floor(bike.price*4*0.14)}</p>
         </div>
         <div className={styles.checMain24}>
         <p>SGST (14%)</p>
-        <p>₹{Math.floor(bike.price*0.14)}</p>
+        <p>₹{Math.floor(bike.price*4*0.14)}</p>
         </div>
         <div className={styles.checMain25}>
         <p>Refundeable deposit Fee</p>
@@ -109,7 +109,7 @@ export default function PaymentDetails(){
         </div>
         <div className={styles.checMain26}>
         <p>Total Payable Amount</p>
-        <p>₹{(bike.price*4)+Math.floor(bike.price*0.28)}</p>
+        <p>₹{(bike.price*4)+Math.floor(bike.price*4*0.28)}</p>
         </div>
         <Button marginLeft="40px" width="350px" marginTop="40px" backgroundColor="#FDB605" onClick={()=>{setTerms(true)}}>Make Payment</Button>
         </div>    

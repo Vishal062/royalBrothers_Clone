@@ -34,20 +34,20 @@ export default function Nav(){
         </div>
         <div style={{display:"flex" ,flexDirection:"row",width:"55%",alignItems:"center",justifyContent:"space-evenly"}}>
         <div>
-            <Link to="/bikes"><Text fontSize="18px" fontWeight="500">Tariff</Text></Link>
+            <Link to="/bikes"><Text fontSize="16px" fontWeight="700">Tariff</Text></Link>
             </div>
             <div>
-            <Text fontSize="18px" fontWeight="500">Store</Text>
+            <Text fontSize="16px" fontWeight="700">Store</Text>
             </div>
             <div style={{display:"flex",flexDirection:"row",width:"140px"}}>
-            <Text fontSize="18px" fontWeight="500">What's New?</Text>
+            <Text fontSize="16px" fontWeight="700">What's New?</Text>
             <img style={{height:"8px",marginTop:"11px",marginLeft:"20px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
             </div>
             <div>
-            <Text fontSize="18px" fontWeight="500">Offers</Text>
+            <Text fontSize="16px" fontWeight="700">Offers</Text>
             </div>
             <div  style={{display:"flex",flexDirection:"row",width:"200px"}}>
-            <Text fontSize="18px" fontWeight="500">Partner With Us</Text>
+            <Text fontSize="16px" fontWeight="700">Partner With Us</Text>
             <img style={{height:"8px",marginTop:"11px",marginLeft:"20px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vector%20(1).png" alt="arrow"></img>
             </div>
         </div>

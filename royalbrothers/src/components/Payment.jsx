@@ -98,7 +98,7 @@ const [bike,setBike] = useState({})
       </div>
       <div className={styles.paym}>
         <p>Total Payable Amount</p>
-        <p>₹ {(bike.price*4)+Math.floor(bike.price*0.28)}</p>
+        <p>₹ {(bike.price*4)+Math.floor(bike.price*4*0.28)}</p>
       </div>
       <div className={styles.timer}>
       <CountdownCircleTimer
