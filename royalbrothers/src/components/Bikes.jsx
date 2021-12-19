@@ -12,9 +12,10 @@ export default function Bikes(){
     useEffect(()=>{
         const pickUp = JSON.parse(localStorage.getItem("pick"));
         const dropl = JSON.parse(localStorage.getItem("drop"));
-        const location = JSON.parse(localStorage.getItem("loc"))
+        const location = JSON.parse(localStorage.getItem("loc"));
         const pic = Number(pickUp.end.split(":")[0]);
-        setdTime(pic)
+        const drops =  Number(dropl.end.split(":")[0])-12;
+        setdTime(drops)
         setPick(pickUp);
         setDrop(dropl)
         setLocation(location)
@@ -156,14 +157,14 @@ export default function Bikes(){
                 <div className={styles.bikeDa}>
                     <div className={styles.bikeDa1}>
                     <p>{e.availableTime} AM</p>
-                    <p>08 DEC 2021</p>
+                    <p>{pick.start}</p>
                     </div>
                     <div className={styles.bikeDa2}>
                     <p>TO</p>
                     </div>
                     <div className={styles.bikeDa3}>
                     <p>{dtime} PM</p>
-                    <p>09 DEC 2021</p>
+                    <p>{drop.start}</p>
                     </div>
                 </div>
                 <div className={styles.lastB}>

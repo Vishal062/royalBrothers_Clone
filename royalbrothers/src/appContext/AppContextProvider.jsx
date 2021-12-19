@@ -7,8 +7,9 @@ export default function AppContextProvider({children}){
     const [terms,setTerms] = useState(false)
     const [pick,setPick] = useState({})
     const [drop,setDrop] = useState({})
+    const [s,setS] = useState(0)
     return(
-        <AppContext.Provider value={{pick,setDrop,setPick,drop,location,setLocation,terms,setTerms}}>
+        <AppContext.Provider value={{pick,setDrop,setPick,drop,location,setLocation,s,setS,terms,setTerms}}>
             {children}
         </AppContext.Provider>
     )

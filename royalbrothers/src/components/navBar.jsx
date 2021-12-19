@@ -1,11 +1,20 @@
 import { Text,Button } from '@chakra-ui/react';
 import DrawerExample from './Drawer';
-import { useContext } from 'react';
+import { useContext,useEffect,useState } from 'react';
 import { AppContext } from '../appContext/AppContextProvider';
 import { Link } from 'react-router-dom';
 
 export default function Nav(){
-    const {location} = useContext(AppContext)
+    const {location,s} = useContext(AppContext)
+  useEffect(()=>{
+      const name = JSON.parse(localStorage.getItem("username"))
+      const token = JSON.parse(localStorage.getItem("token"))
+      setToken(token);
+      setName(name);
+  },[s])
+ 
+    const [token,setToken] = useState("")
+    const [name,setName] = useState("")
     return(
         <>
         <div style={{display:"flex",flexDirection:"column",position:"fixed",width:"100%",backgroundColor:"white"}}>
@@ -50,8 +59,13 @@ export default function Nav(){
             </div>
         </div>
         <div style={{marginLeft:"30px", marginRight:"10px", width:"200px",display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+        {token===""?
+        <>
             <Button height="50px" width="90px" backgroundColor="transparent">Login</Button>
             <Button height="50px" width="90px" backgroundColor="#FDB605"> Sign up</Button>
+            </>
+            :
+            <Button height="45px" width="180px" backgroundColor="transparent" border="1px solid #FDB065">{name}</Button>}
         </div>
         </div>
         </div>

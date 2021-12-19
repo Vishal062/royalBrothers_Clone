@@ -3,7 +3,10 @@ import axios from "axios"
 import { useState } from "react"
 import { Button } from "@chakra-ui/react"
 import { useNavigate } from "react-router"
+import { useContext } from "react"
+import { AppContext } from "../appContext/AppContextProvider"
 export default function Login(){
+    const {setS} = useContext(AppContext)
     const navigate = useNavigate();
     const [user,setUser] = useState({
         email:"",
@@ -18,7 +21,9 @@ export default function Login(){
                     return;
                 }
                 localStorage.setItem("token",JSON.stringify(res.data.token));
+                localStorage.setItem("username",JSON.stringify(res.data.name))
                 const token = JSON.parse(localStorage.getItem("token"));
+                setS((prev)=>{return prev+1})
                 if(token!==""){
                     navigate("/checkout")
                 }else{

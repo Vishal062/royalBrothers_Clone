@@ -10,7 +10,6 @@ import {
     DrawerContent,
     DrawerCloseButton,
     Button,
-    Input
   } from '@chakra-ui/react'
 
 
@@ -32,17 +31,24 @@ import {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader></DrawerHeader>
   
-            <DrawerBody>
-              <Input placeholder='Type here...' />
+            <DrawerBody display="flex" flexDirection="column" marginTop="50px">
+             <Button textAlign="left" height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Tariff</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Store</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Flag-Off RB Adventure Tour Club</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Partner With Us</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Blog</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Indian Bike Routes</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">About Us</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Terms & Conditions</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Bike Tour</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Privacy Policy</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">FAQ</Button>
+             <Button textAlign="left"  height="60px" backgroundColor="transparent" paddingTop="10px" paddingBottom="10px" borderRadius="none" fontWeight="400" borderBottom="1px solid #c4c4c4">Reach Us</Button>
             </DrawerBody>
   
             <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='blue'>Save</Button>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

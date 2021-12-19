@@ -118,6 +118,7 @@ font-weight: 500;
     font-size: 16px;
     width:90%;
     height:30px;
+    padding-left: 20px;
 }
 .expi{
     width:90%;
@@ -141,6 +142,7 @@ font-weight: 500;
     width:30%;
     height:30px;
     margin-left: 15px;
+    padding-left: 20px;
 }
 
 .paym{
@@ -149,9 +151,13 @@ font-weight: 500;
 }
 .paym>p:nth-child(1){
     margin-top: 30px;
+    font-size:18px;
+    font-weight: 500;
 }
 .paym>p:nth-child(2){
     margin-bottom: 50px;
+    font-size:18px;
+    font-weight: 500;
 }
 
 .timer{
@@ -167,4 +173,8 @@ font-weight: 500;
 .note>p{
     font-size: 12px;
     font-weight: 500;
+}
+
+.paytm{
+    width:70px
 }

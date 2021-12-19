@@ -7,12 +7,13 @@ import axios from "axios"
 export default function PaymentDetails(){
     const {setTerms} = useContext(AppContext);
     useEffect(()=>{
-        const id = JSON.parse(localStorage.getItem("id"))
         const pick = JSON.parse(localStorage.getItem("pick"))
         const drop = JSON.parse(localStorage.getItem("drop"));
         const ids = JSON.parse(localStorage.getItem("id"));
+        const drops =  Number(drop.end.split(":")[0])-12;
         setPick(pick);
         setDrop(drop)
+        setdTime(drops)
         axios.get(`http://localhost:3001/bike/${ids}`)
         .then((res)=>{
             setBike(res.data)
@@ -22,7 +23,7 @@ export default function PaymentDetails(){
     const [bike,setBike] = useState({})
     const [pick,setPick] = useState({})
     const [drop,setDrop] = useState({})
-    console.log(bike)
+    const [dtime,setdTime] = useState(0)
     return(
         <div className={styles.checMain}>
         <div className={styles.checMain1}>
@@ -45,7 +46,7 @@ export default function PaymentDetails(){
                     <p>to</p>
                 </div>
                 <div className={styles.slotTi3}>
-                    <p>8:00 pm</p>
+                    <p>{dtime}:00 pm</p>
                     <p>{drop.start}</p>
                 </div>
             </div>
@@ -92,15 +93,15 @@ export default function PaymentDetails(){
         </div>
         <div className={styles.checMain22}>
         <p>Booking Fee</p>
-        <p>₹325</p>
+        <p>₹{bike.price*4}</p>
         </div>
         <div className={styles.checMain23}>
         <p>CGST (14%)</p>
-        <p>₹45.5</p>
+        <p>₹{Math.floor(bike.price*0.14)}</p>
         </div>
         <div className={styles.checMain24}>
         <p>SGST (14%)</p>
-        <p>₹45.5</p>
+        <p>₹{Math.floor(bike.price*0.14)}</p>
         </div>
         <div className={styles.checMain25}>
         <p>Refundeable deposit Fee</p>
@@ -108,7 +109,7 @@ export default function PaymentDetails(){
         </div>
         <div className={styles.checMain26}>
         <p>Total Payable Amount</p>
-        <p>₹416</p>
+        <p>₹{(bike.price*4)+Math.floor(bike.price*0.28)}</p>
         </div>
         <Button marginLeft="40px" width="350px" marginTop="40px" backgroundColor="#FDB605" onClick={()=>{setTerms(true)}}>Make Payment</Button>
         </div>    

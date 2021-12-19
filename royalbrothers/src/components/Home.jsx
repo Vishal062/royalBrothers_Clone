@@ -90,9 +90,12 @@ export default function Home(){
                 <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%206.png" alt="bar"></img>
             </div>
             <div className={styles.info}>
-            <Heading as='h6' size='xs'>Vehicle Insuarence</Heading>
-            <Heading as='h6' size='xs'>Vehicle Insuarence</Heading>
-            <Heading as='h6' size='xs'>Vehicle Insuarence</Heading>
+            <img style={{height:"37px"}}src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Vehicle%20insurance.png" alt="img"></img>
+            <Heading fontSize="18px" fontWeight="200" as='h6' size='xs'>Vehicle Insuarence</Heading>
+            <img  style={{height:"37px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Roadside%20assistance.png" alt="img"></img>
+            <Heading  fontSize="18px" fontWeight="200" as='h6' size='xs'>24/7 Roadside Assistance</Heading>
+            <img  style={{height:"37px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/Bike%20Maintenance.png" alt="img"></img>
+            <Heading fontSize="18px" fontWeight="200" as='h6' size='xs'>Bike Maintainence</Heading>
             </div>
             <img src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%2013.png" alt="homei2"/>
             <div className={styles.sep1}>

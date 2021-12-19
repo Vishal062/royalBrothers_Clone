@@ -262,7 +262,7 @@ padding-left: 10px;
     display: flex;
     flex-direction: column;
     width:40%;
-    text-align: left;
+    text-align: right;
 }
 .bikeDa3>p:nth-child(1){
     font-weight: 600;
