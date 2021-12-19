@@ -112,8 +112,8 @@ npm i
 - **Vishal Sinha** [Vishal062](https://github.com/Vishal062)
 - **Shubham Dobhal** [shubhamdobhal05](https://github.com/shubhamdobhal05)
 # UI/UX Team
-- Manisha Dhore
-- Prajwal
+- **Manisha dhore** [manisha-dhore](https://www.linkedin.com/in/manisha-dhore/)
+- **Prajwal BU** [prajwalbu](https://www.behance.net/prajwalbu)
 <br/> 
 
 <!-- ## **_Snapshots of the Project_**
