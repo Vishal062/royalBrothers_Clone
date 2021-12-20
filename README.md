@@ -103,7 +103,7 @@ npm i
 
   ## _Blog of This Project(Know more about the project and experiance)_
 
-  [Medium](#)
+  [Medium](https://medium.com/@vs9425348/royalbrothers-clone-project-d782874dd621)
 
 <br/>
 
@@ -116,50 +116,56 @@ npm i
 - **Prajwal BU** [prajwalbu](https://www.behance.net/prajwalbu)
 <br/> 
 
-<!-- ## **_Snapshots of the Project_**
+## **_Snapshots of the Project_**
 
-- Splash Screen
-  <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638359242891/edrhgWfrz.png" alt="Start page"/>
-
-  <br/>
-
-- Sign In and Sign Up Page With Google and Facebook Sign Option with Skip Optaion , if you not want to sign in only visit to website you can use Skip button below
-  <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638359354339/8uc94c3IP.png" alt="Sign In/Sign Up page"/>
+- Landing Page (Modal Screen)
+  <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_1.png?raw=true" alt="Start page"/>
 
   <br/>
 
-- Home Page along with Navbar and Footer and also show which user start reading
+  - Home Page along with Navbar and Footer and also show Pickup and dropping Timing:
 
-    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638359419972/UQRixeMaB.png">
+    <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_2.png?raw=true">
+    
+    <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_3.png?raw=true">
+    
+    <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_4.png?raw=true">
+
+    <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_5.png?raw=true">
 
 <br/>
 
-- Explore page has all the according to book section such as Clasics, Thriller, Self-help etc...
+- Login and Sign Up Page 
+  <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/SignUp.png?raw=true" alt="Sign Up page"/>
 
-    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638359480701/lFNnXi4Ry.png"/>
+<img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Login.png?raw=true" alt="login page"/>
+  <br/>
+
+
+
+- Explore page has all the Bike according to user Choice...
+
+    <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_6.png?raw=true"/>
 
   <br/>
 
-- The My Books page has displays the books in the User's Read and Book List
+- Booking starting page with details
 
-   <img src = "https://cdn.hashnode.com/res/hashnode/image/upload/v1638359835833/Vmwr5Fcf4.png" alt = "myBooksPage"/>
+   <img src = "https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_7.png?raw=true" alt = "myBookingPage"/>
    <br/>
    
-- Settings Page
+- Payment Option
 
-  <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638359994967/udpa1OX6H.png">
+  <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_8.png?raw=true">
   <br/>
 
-- User Profile Page
-   
-   - Light Mode
+- Payment Option
 
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638360184554/mbZULfAYm.png">
-        <br/>
+  <img src="https://github.com/Vishal062/royalBrothers_Clone/blob/master/SnapShot_Project/Page_9.png?raw=true">
+  <br/>
 
-  - Night Mode
 
-    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638360100665/XyiQWCIJa.png" />
-    <br/> -->
+##  - Thank You
+
 
 
