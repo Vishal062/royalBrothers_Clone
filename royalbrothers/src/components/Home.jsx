@@ -7,7 +7,7 @@ import Caraousel1 from "./caraousel1"
 import Caraousel2 from "./caraousel2"
 import {useState} from "react"
 import { useNavigate } from "react-router"
-import { useContext} from "react"
+import { useContext,useEffect} from "react"
 import {useDispatch} from "react-redux"
 import { getData } from "../redux/action"
 import { AppContext } from "../appContext/AppContextProvider"
@@ -15,7 +15,14 @@ import axios from "axios"
 
 
 export default function Home(){
-    const {setPick,setDrop} = useContext(AppContext)
+    useEffect(()=>{
+        const token = JSON.parse(localStorage.getItem("token"))
+        if(!token){
+            localStorage.setItem("token",JSON.stringify(""))
+        }
+        setS((prev)=>prev-1)
+    },[])
+    const {setPick,setDrop,setS} = useContext(AppContext)
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [pickup,setPickup] = useState({
