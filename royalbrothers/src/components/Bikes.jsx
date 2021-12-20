@@ -19,7 +19,7 @@ export default function Bikes(){
         setPick(pickUp);
         setDrop(dropl)
         setLocation(location)
-        axios.get(`http://localhost:3001/bike/${location}/${pic}`)
+        axios.get(`https://royal-brother.herokuapp.com/bike/${location}/${pic}`)
         .then((res)=>{
             dispatch(getData(res.data))
         })

@@ -9,7 +9,7 @@ import {useNavigate} from "react-router"
 export default function Payment(){  
   useEffect(()=>{
     const ids = JSON.parse(localStorage.getItem("id"));
-    axios.get(`http://localhost:3001/bike/${ids}`)
+    axios.get(`https://royal-brother.herokuapp.com/bike/${ids}`)
     .then((res)=>{
         setBike(res.data)
     })

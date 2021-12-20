@@ -2,10 +2,12 @@ import { Text,Button } from '@chakra-ui/react';
 import DrawerExample from './Drawer';
 import { useContext,useEffect,useState } from 'react';
 import { AppContext } from '../appContext/AppContextProvider';
+import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 export default function Nav(){
     const {location,s} = useContext(AppContext)
+    const navigate = useNavigate()
   useEffect(()=>{
       const name = JSON.parse(localStorage.getItem("username"))
       const token = JSON.parse(localStorage.getItem("token"))
@@ -30,7 +32,7 @@ export default function Nav(){
         <div style={{display:"flex" ,flexDirection:"row"}}>
         <div style={{width:"200px",display:"flex",flexDirection:"row",marginLeft:"10px"}}>
             <DrawerExample />
-            <img style={{height:"57px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%201.png" alt="logo" />
+            <img onClick={()=>{navigate("/")}} style={{height:"57px"}} src="https://raw.githubusercontent.com/Kamleshfw11179/royalBrothersimages/main/image%201.png" alt="logo" />
         </div>
         <div style={{display:"flex" ,flexDirection:"row",width:"55%",alignItems:"center",justifyContent:"space-evenly"}}>
         <div>

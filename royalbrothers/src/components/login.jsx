@@ -14,7 +14,7 @@ export default function Login(){
     })
     function getData(){
         try{
-            axios.post("http://localhost:3001/login",user)
+            axios.post("https://royal-brother.herokuapp.com/login",user)
             .then((res)=>{
                 if(res.data.status===400){
                     alert(res.data.message);

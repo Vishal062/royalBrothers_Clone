@@ -20,7 +20,7 @@ export default function Login(){
 
     function signUp(){
         try{
-        axios.post("http://localhost:3001/register",user)
+        axios.post("https://royal-brother.herokuapp.com/register",user)
         .then((res)=>{
             if(res.status===200){
                 console.log(res)

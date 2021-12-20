@@ -14,7 +14,7 @@ const Last = () => {
         setPick(pick);
         setDrop(drop)
         setDt(pic)
-        axios.get(`http://localhost:3001/bike/${ids}`)
+        axios.get(`https://royal-brother.herokuapp.com/bike/${ids}`)
         .then((res)=>{
             setBike(res.data)
         })

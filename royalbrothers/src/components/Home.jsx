@@ -47,7 +47,7 @@ export default function Home(){
         if(pickup.start&&pickup.end&&dropOff.start&&dropOff.end){
             let time = Number(+pickup.end.split(":")[0])
             try{
-                axios.get("http://localhost:3001/bike")
+                axios.get("https://royal-brother.herokuapp.com/bike")
                 .then((res)=>{
                     let data = [];
                     for(var i=0;i<res.data.length;i++){

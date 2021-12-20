@@ -14,7 +14,7 @@ export default function PaymentDetails(){
         setPick(pick);
         setDrop(drop)
         setdTime(drops)
-        axios.get(`http://localhost:3001/bike/${ids}`)
+        axios.get(`https://royal-brother.herokuapp.com/bike/${ids}`)
         .then((res)=>{
             setBike(res.data)
         })
