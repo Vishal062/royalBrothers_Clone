@@ -69,7 +69,7 @@ Follow the following steps to get development environment running.
   npm i
   ```
 
-- Server
+- backend
 
 ```bash
 cd server
