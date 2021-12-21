@@ -58,7 +58,7 @@ Follow the following steps to get development environment running.
 - Client
 
   ```bash
-  cd client
+  cd royalbrothers
   ```
 
   ```bash
